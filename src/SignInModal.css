@@ -1,5 +1,4 @@
 
-
 /* Full screen overlay */
 .modal-overlay {
   position: fixed;
@@ -24,8 +23,8 @@
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle edge */
   border-radius: 16px;
   padding: 32px;
-  min-height: 460px;
-  max-height: 460px;
+  min-height: 540px;
+  max-height: 560px;
   min-width: 420px;
   max-width: 420px;
   width: 350px;
@@ -116,41 +115,75 @@
 
 .login-submit {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  min-height: 44px;
   border-radius: 50px;
   border: 2px solid whitesmoke;
   transition: all 0.3s ease ;
   background: #8006b9;
   color: #f9f8fa;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.4px;
   cursor: pointer;
-  margin-top:50px;
-  font-weight: 550;
+  margin-top: 55px;
 }
-.close-btn {
+
+/* Divider between Sign In and Google buttons */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.google-signin {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  min-height: 44px;
   border-radius: 50px;
-  transition:  all 0.3s ease;
-  background: #ff0000;
-  border: 2px solid whitesmoke ;
-  color: rgb(255, 255, 255);
-  margin-bottom: 10px;
-  margin-top : 17px;
-  font-weight: 550;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #1f1f1f;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.google-logo {
+  flex-shrink: 0;
+}
+
+.google-signin:hover {
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .login-submit:hover{
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }
-
-.close-btn:hover{
-  box-shadow: 
-    0 0 0 1px rgba(255, 0, 0, 0.4),    /* Sharp Red edge */
-    0 0 20px rgba(255, 0, 0, 0.6),   /* Core Red glow */
-    0 0 40px rgba(217, 30, 30, 0.3);
-    
-  filter: brightness(108%); 
-}
-
 

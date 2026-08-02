@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Navbar.jsx'
 import SignUpPage from './SignUpPage.jsx';
 import HeroSection from './HeroSection.jsx';
@@ -8,6 +8,17 @@ import BlackSection from './BlackSection.jsx';
 import Footer from './Footer.jsx';
 import SearchFlights from './SearchFlights.jsx';
 import SignInModal from './SignInModal.jsx';
+
+// Scroll the window to the top on every route change.
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+}
 
 function Home({ onOpenSignIn }) {
   return (
@@ -28,6 +39,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <>
@@ -42,3 +54,4 @@ export default function App() {
     </Router>
   )
 }
+

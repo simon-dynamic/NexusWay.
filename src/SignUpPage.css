@@ -26,6 +26,15 @@
   justify-content: center;
 }
 
+/* Header row: Back button on the left, Sign Up title on the right */
+.signup-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 84%;
+  margin-bottom: 4px;
+}
+
 .signup-back-btn {
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.05);
@@ -36,7 +45,6 @@
   padding: 6px 14px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  margin-bottom: 16px;
   font-weight: 500;
 }
 
@@ -46,26 +54,27 @@
 }
 
 .signup-page-title {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin: 0;
   letter-spacing: -1px;
+  line-height: 1;
 }
 
 .signup-title-dark {
-  color: #f5f3f3;
+  color: #ff0000; /* Matches the red "N" in the Nexus navbar logo */
 }
 
 .signup-title-light {
-  color: #f8f3f4;
+  color: #e87084; /* Matches the rose "exus" in the navbar logo */
 }
 
 .signup-title-dark-purple {
-  color: #f6f4f7;
+  color: #8006b9; /* Matches the fuchsia-violet "W" in the navbar logo */
 }
 
 .signup-title-light-purple {
-  color: #ebe9ee;
+  color: #ad71ec; /* Matches the lavender "ay" in the navbar logo */
 }
 
 .signup-page-subtitle {
@@ -78,14 +87,14 @@
 .signup-page-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .signup-page-input-group {
   display: flex;
   flex-direction: column;
-  height: 70px;
-  gap: 4px;
+  height: 62px;
+  gap: 6px;
 }
 
 .signup-page-input-group label {
@@ -136,8 +145,7 @@
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(128, 6, 185, 0.3);
   height: 40px;
-  width: fit-content;
-  min-width: 200px;
+  width: 84%;
   box-sizing: border-box;
   letter-spacing: 0.3px;
 }
@@ -155,8 +163,63 @@
   transform: translateY(0);
 }
 
+/* Divider between Create Account and Google buttons */
+.signup-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 4px;
+  width: 84%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.signup-divider::before,
+.signup-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.signup-google-btn {
+  margin-top: 4px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #1f1f1f;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  height: 40px;
+  width: 84%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.signup-google-logo {
+  flex-shrink: 0;
+}
+
+.signup-google-btn:hover {
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
 .signup-page-footer {
   margin-top: 12px;
+  width: 84%;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
   text-align: center;
@@ -248,3 +311,4 @@
     padding: 8px 12px;
   }
 }
+
