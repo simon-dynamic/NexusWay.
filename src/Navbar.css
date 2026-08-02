@@ -1,0 +1,163 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 4.125rem;
+  padding: 0 1.25rem;
+  background: rgba(10, 10, 15, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1.1;
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
+.navbar__brand:hover {
+  filter: brightness(1.08);
+}
+
+.navbar__brand:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.navbar__wordmark {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.85rem, 5.2vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+/* N: YouTube-style red; exus: rose */
+.navbar__wordmark-n {
+  color: #ff0000;
+}
+
+.navbar__wordmark-exus {
+  color: #e87084;
+}
+
+/* W: vivid fuchsia-violet (same kind of punch as N’s #ff0000—saturated, not pale or murky) */
+.navbar__wordmark-w {
+  color: #8006b9;
+}
+
+.navbar__wordmark-ay {
+  color: #ad71ec;
+}
+
+.navbar__wordmark-dot {
+  color: #ffffff !important;
+}
+
+.navbar__end {
+  display: flex;
+  align-items: center;
+  gap: 2.678rem;
+}
+
+.navbar__about {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  color: #d4d4d8;
+  text-decoration: none;
+  padding: 0.35rem 0;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.navbar__signup{
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  color: #d4d4d8;
+  text-decoration: none;
+  padding: 0.35rem 0;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+
+
+.navbar__about:hover {
+  color: #fafafa;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #a78bfa;
+  text-underline-offset: 0.3em;
+}
+
+.navbar__signup:hover{
+  color: #fafafa;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #a78bfa;
+  text-underline-offset: 0.3em;
+}
+
+.navbar__about:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.navbar__signin {
+  appearance: none;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #faf5ff;
+  background: linear-gradient(145deg, #7c3aed 0%, #6d28d9 100%);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  padding: 0.7rem 1.35rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease,
+    filter 0.18s ease;
+}
+
+.navbar__signin:hover {
+  border-color: whitesmoke;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.2),
+    0 0 20px rgba(124, 58, 237, 0.45),
+    0 0 40px rgba(109, 40, 217, 0.2);
+  filter: brightness(1.08);
+}
+
+.navbar__signin:active {
+  transform: scale(0.98);
+}
+
+.navbar__signin:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+

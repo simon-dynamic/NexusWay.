@@ -1,0 +1,376 @@
+.sf-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0f 0%, #0f0f16 50%, #14141d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px 72px;
+  box-sizing: border-box;
+}
+
+/* Image banner placeholder — space for a future uploaded image below the navbar */
+.sf-banner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 24px 0;
+}
+
+.sf-banner-placeholder {
+  width: 100%;
+  height: 280px;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  user-select: none;
+}
+
+.sf-banner-icon {
+  font-size: 2.6rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.sf-banner-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.sf-container {
+  width: 100%;
+  max-width: 1100px;
+  align-self: center;
+}
+
+.sf-back-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.sf-back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Title — matches the NexusWay logo text style */
+.sf-title {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.sf-title-s {
+  color: #ff0000;
+}
+
+.sf-title-earch {
+  color: #e87084;
+}
+
+.sf-title-f {
+  color: #8006b9;
+}
+
+.sf-title-lights {
+  color: #ad71ec;
+}
+
+.sf-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Trip Type */
+.sf-trip-type {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sf-trip-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sf-trip-option input {
+  display: none;
+}
+
+.sf-trip-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sf-trip-option.active .sf-trip-circle {
+  border-color: #9d4edd;
+}
+
+.sf-trip-option.active .sf-trip-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9d4edd;
+}
+
+/* Fields */
+.sf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sf-field label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.sf-field input,
+.sf-field select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sf-field select {
+  cursor: pointer;
+}
+
+.sf-field select option {
+  background: #1a1a2e;
+  color: white;
+}
+
+.sf-field input:focus,
+.sf-field select:focus {
+  border-color: rgba(128, 6, 185, 0.8);
+  box-shadow: 0 0 0 2px rgba(128, 6, 185, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sf-field input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+.sf-field input[type="date"] {
+  color-scheme: dark;
+}
+
+/* Route Row */
+.sf-route-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 20px;
+}
+
+.sf-swap-btn {
+  font-size: 1.4rem;
+  color: #9d4edd;
+  cursor: pointer;
+  padding-bottom: 12px;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.sf-swap-btn:hover {
+  transform: rotate(180deg);
+}
+
+/* Dates Row */
+.sf-dates-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Passengers */
+.sf-passengers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sf-passenger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.sf-passenger-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sf-stepper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sf-stepper button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.sf-stepper button:hover {
+  background: #9d4edd;
+  border-color: #9d4edd;
+}
+
+.sf-stepper span {
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* Class */
+.sf-class-field {
+  max-width: 340px;
+}
+
+/* Submit */
+.sf-search-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 14px 40px;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background: linear-gradient(145deg, #7c3aed 0%, #6d28d9 100%);
+  color: #faf5ff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+}
+
+.sf-search-btn:hover {
+  border-color: whitesmoke;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.3),
+    0 4px 20px rgba(124, 58, 237, 0.4),
+    0 8px 40px rgba(109, 40, 217, 0.2);
+  filter: brightness(1.1);
+}
+
+.sf-search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sf-page {
+    padding: 0 20px 56px;
+  }
+
+  .sf-banner {
+    padding: 16px 0;
+  }
+
+  .sf-banner-placeholder {
+    height: 180px;
+  }
+
+  .sf-title {
+    white-space: normal;
+  }
+
+  .sf-route-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sf-swap-btn {
+    display: none;
+  }
+
+  .sf-dates-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sf-passengers {
+    grid-template-columns: 1fr;
+  }
+
+  .sf-class-field {
+    max-width: 100%;
+  }
+}
+

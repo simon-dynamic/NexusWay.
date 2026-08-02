@@ -1,0 +1,159 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/herosection.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 2rem clamp(1.5rem, 6vw, 6rem);
+  text-align: left;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-headline {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Line 1: "Striving together for a" — S matches N (#ff0000), "triving together" matches exus (#e87084), "for a" white */
+.hero-headline-line1 {
+  color: #e87084;
+}
+
+.hero-headline-s {
+  color: #ff0000;
+}
+
+.hero-headline-for {
+  color: #ffffff;
+}
+
+/* Line 2: "Nexus path" — N follows W dark theme (#8006b9), "exus path" follows ay light theme (#ad71ec) */
+.hero-headline-line2 {
+  color: #ad71ec;
+}
+
+.hero-headline-n {
+  color: #8006b9;
+}
+
+.hero-headline-exus {
+  color: #ad71ec;
+}
+
+.hero-subtitle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
+.hero-subtitle-text {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.0156em;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Explore button — same style as Sign In button */
+.hero-explore-button {
+  margin-top: 0.5rem;
+}
+
+.hero-explore-btn {
+  appearance: none;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #faf5ff;
+  background: linear-gradient(145deg, #7c3aed 0%, #6d28d9 100%);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  padding: 0.7rem 1.35rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease,
+    filter 0.18s ease;
+}
+
+.hero-explore-btn:hover {
+  border-color: whitesmoke;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.2),
+    0 0 20px rgba(124, 58, 237, 0.45),
+    0 0 40px rgba(109, 40, 217, 0.2);
+  filter: brightness(1.08);
+}
+
+.hero-explore-btn:active {
+  transform: scale(0.98);
+}
+
+.hero-explore-btn:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .hero-subtitle-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-container {
+    padding: 2rem 1.25rem;
+  }
+}
+

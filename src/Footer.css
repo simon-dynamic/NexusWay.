@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  background: #0a0a0a;
+  padding: 4rem 0 2rem 0;
+  position: relative;
+  margin-top: 0;
+}
+
+.footer-content {
+  width: 100%;
+  text-align: center;
+  padding: 0 2px;
+  margin-top: 2rem;
+}
+
+.footer-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 25%, #8b5cf6 50%, #f33232 75%, #e40505 0%);
+  margin: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-text {
+  color: #e9d5ff;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
