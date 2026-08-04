@@ -1,0 +1,110 @@
+.truck-section {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  min-height: 600px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.truck-section-content {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
+
+.truck-section-image {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.truck-section-text {
+  position: absolute;
+  top: 50%;
+  right:60px;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: left;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.truck-headline {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top-truck-content {
+  position: absolute;
+  top: 2rem;
+  left: 2%;
+  z-index: 1;
+  text-align: left;
+}
+
+.top-text-truck {
+  color: #6d6666;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Line 1: "Find Path" — F matches S (#ff0000), "ind Path" matches exus (#e87084) */
+.truck-headline-line1 {
+  color: #e87084;
+}
+
+.truck-headline-f {
+  color: #ff0000;
+}
+
+.truck-headline-path {
+  color: #e87084;
+}
+
+/* Line 2: "Strive your way" — S matches N (#8006b9), "trive your way" matches exus (#ad71ec) */
+.truck-headline-line2 {
+  color: #ad71ec;
+}
+
+.truck-headline-s {
+  color: #8006b9;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .truck-headline {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .truck-section-text {
+    right: 1.25rem;
+    left: 1.25rem;
+  }
+}

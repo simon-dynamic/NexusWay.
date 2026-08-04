@@ -4,7 +4,7 @@ import Navbar from './Navbar.jsx'
 import SignUpPage from './SignUpPage.jsx';
 import HeroSection from './HeroSection.jsx';
 import FeatureBoxes from './FeatureBoxes.jsx';
-import BlackSection from './BlackSection.jsx';
+import TruckSection from './TruckSection.jsx';
 import Footer from './Footer.jsx';
 import SearchFlights from './SearchFlights.jsx';
 import SignInModal from './SignInModal.jsx';
@@ -25,7 +25,7 @@ function Home({ onOpenSignIn }) {
     <>
       <HeroSection onOpenSignIn={onOpenSignIn} />
       <FeatureBoxes />
-      <BlackSection />
+      <TruckSection />
       <Footer />
     </>
   );
