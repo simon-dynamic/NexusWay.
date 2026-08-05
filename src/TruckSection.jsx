@@ -12,10 +12,21 @@ const TruckSection = () => {
               <span className="truck-headline-f">F</span>ind{' '}
               <span className="truck-headline-path">Path</span>
             </span>
-            <span className="truck-headline-line2">
+<span className="truck-headline-line2">
               <span className="truck-headline-s">S</span>trive your way
             </span>
           </h1>
+          <div className="truck-subtitle-container">
+            <div className="truck-subtitle">
+              <span className="truck-subtitle-text">Specify your vehicle size and length</span>
+            </div>
+            <div className="truck-subtitle">
+              <span className="truck-subtitle-text">Get smart and custom fit route planning</span>
+            </div>
+          </div>
+          <div className="truck-start-button">
+            <button className="truck-start-btn">Start</button>
+          </div>
         </div>
 </div>
       <div className="top-truck-content">

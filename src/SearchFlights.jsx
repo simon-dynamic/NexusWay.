@@ -23,13 +23,18 @@ const SearchFlights = () => {
     alert('Search Flights functionality coming soon!');
   };
 
-  return (
+return (
     <div className="sf-page">
-      {/* Image banner placeholder — future upload space below navbar */}
+{/* Image banner — airport (1).png below navbar */}
       <div className="sf-banner">
-        <div className="sf-banner-placeholder">
-          <span className="sf-banner-icon">🖼️</span>
-          <span className="sf-banner-text">Image banner placeholder</span>
+        <div className="sf-banner-image-wrap">
+          <img src="/airport%20(1).png" alt="Airport banner" className="sf-banner-image" />
+          <span className="sf-banner-text-overlay">Find your way</span>
+          <div className="sf-banner-words">
+            <span className="sf-banner-word">Find</span>
+            <span className="sf-banner-word">Strive</span>
+            <span className="sf-banner-word">Reach</span>
+          </div>
         </div>
       </div>
       <div className="sf-container">

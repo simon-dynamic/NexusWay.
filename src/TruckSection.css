@@ -24,7 +24,7 @@
 
 .truck-section-text {
   position: absolute;
-  top: 50%;
+  top: 64%;
   right:60px;
   transform: translateY(-50%);
   z-index: 1;
@@ -52,6 +52,73 @@
   left: 2%;
   z-index: 1;
   text-align: left;
+}
+
+/* Subtitle — same size/style as HeroSection subtext */
+.truck-subtitle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.truck-subtitle-text {
+  color: #ffffff;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.5vw, 1.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Start button — same properties as Explore button */
+.truck-start-button {
+  margin-top: 1.25rem;
+}
+
+.truck-start-btn {
+  appearance: none;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #faf5ff;
+  background: linear-gradient(145deg, #7c3aed 0%, #6d28d9 100%);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  padding: 0.7rem 1.35rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease,
+    filter 0.18s ease;
+}
+
+.truck-start-btn:hover {
+  border-color: whitesmoke;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.2),
+    0 0 20px rgba(124, 58, 237, 0.45),
+    0 0 40px rgba(109, 40, 217, 0.2);
+  filter: brightness(1.08);
+}
+
+.truck-start-btn:active {
+  transform: scale(0.98);
+}
+
+.truck-start-btn:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
 }
 
 .top-text-truck {
