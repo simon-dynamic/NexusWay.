@@ -66,6 +66,16 @@
   color: #ad71ec;
 }
 
+.hero-headline-dot {
+  display: inline-block;
+  width: 0.22em;
+  height: 0.22em;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-left: 0.12em;
+  vertical-align: baseline;
+}
+
 .hero-subtitle-container {
   display: flex;
   flex-direction: column;

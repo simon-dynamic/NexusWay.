@@ -21,6 +21,7 @@ const FeatureBoxes = () => {
 
   return (
     <div className="feature-boxes-container">
+      <h2 className="feature-heading">Feature Collection</h2>
       <div className="feature-boxes-separator"></div>
       <div className="feature-boxes-wrapper">
         {features.map((feature, index) => (
@@ -36,4 +37,3 @@ const FeatureBoxes = () => {
 };
 
 export default FeatureBoxes;
-

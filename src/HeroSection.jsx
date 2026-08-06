@@ -15,6 +15,7 @@ const HeroSection = ({ onOpenSignIn }) => {
             <span className="hero-headline-line2">
               <span className="hero-headline-n">N</span>
               <span className="hero-headline-exus">exus path</span>
+              <span className="hero-headline-dot"></span>
             </span>
           </h1>
           <div className="hero-subtitle-container">
@@ -35,4 +36,3 @@ const HeroSection = ({ onOpenSignIn }) => {
 };
 
 export default HeroSection;
-

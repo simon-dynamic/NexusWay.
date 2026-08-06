@@ -24,7 +24,9 @@ function Home({ onOpenSignIn }) {
   return (
     <>
       <HeroSection onOpenSignIn={onOpenSignIn} />
+      <div className="section-divider"></div>
       <FeatureBoxes />
+      <div className="section-divider"></div>
       <TruckSection />
       <Footer />
     </>
@@ -54,4 +56,3 @@ export default function App() {
     </Router>
   )
 }
-
