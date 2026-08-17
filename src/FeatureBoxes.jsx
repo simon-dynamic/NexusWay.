@@ -6,11 +6,11 @@ const FeatureBoxes = () => {
   const navigate = useNavigate();
 
   const features = [
-    { title: 'Search Flights', icon: '✈️', path: '/search-flights' },
-    { title: 'Book Flight', icon: '🎫' },
-    { title: 'Documental Analysis', icon: '📄' },
-    { title: 'Watch Movies', icon: '🎬' },
-    { title: 'Logistics & Business', icon: '📦' }
+    { title: 'Search Flights', path: '/search-flights' },
+    { title: 'Book Flight' },
+    { title: 'Documental Analysis' },
+    { title: 'Watch Movies' },
+    { title: 'Logistics & Business' }
   ];
 
   const handleClick = (feature) => {
@@ -26,7 +26,7 @@ const FeatureBoxes = () => {
       <div className="feature-boxes-wrapper">
         {features.map((feature, index) => (
           <div key={index} className="feature-box" onClick={() => handleClick(feature)}>
-            <div className="feature-icon">{feature.icon}</div>
+            <div className="feature-image-placeholder"></div>
             <div className="feature-title">{feature.title}</div>
           </div>
         ))}
