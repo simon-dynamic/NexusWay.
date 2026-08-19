@@ -7,10 +7,10 @@ const FeatureBoxes = () => {
 
   const features = [
     { title: 'Search Flights', path: '/search-flights' },
-    { title: 'Book Flight' },
-    { title: 'Documental Analysis' },
-    { title: 'Watch Movies' },
-    { title: 'Logistics & Business' }
+    { title: 'Dynamic Rate Arbitrage' },
+    { title: 'Cargo Capacity' },
+    { title: 'Customs & Compliance' },
+    { title: 'Logistics & Business', path: '/logistics-business' }
   ];
 
   const handleClick = (feature) => {

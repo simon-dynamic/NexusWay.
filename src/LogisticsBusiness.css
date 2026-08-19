@@ -1,0 +1,33 @@
+/* Logistics & Business page — banner placeholder / title reuse SearchFlights styles (sf-* classes). */
+
+.lb-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0f 0%, #0f0f16 50%, #14141d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px 72px;
+  box-sizing: border-box;
+}
+
+/* Placeholder banner instead of an actual image */
+.sf-banner-image-placeholder {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .lb-page {
+    padding: 0 20px 56px;
+  }
+
+  .sf-banner-image-placeholder {
+    height: 180px;
+  }
+}

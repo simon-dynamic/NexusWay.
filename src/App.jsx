@@ -7,6 +7,7 @@ import FeatureBoxes from './FeatureBoxes.jsx';
 import TruckSection from './TruckSection.jsx';
 import Footer from './Footer.jsx';
 import SearchFlights from './SearchFlights.jsx';
+import LogisticsBusiness from './LogisticsBusiness.jsx';
 import SignInModal from './SignInModal.jsx';
 
 // Scroll the window to the top on every route change.
@@ -52,6 +53,7 @@ export default function App() {
         } />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/search-flights" element={<><Navbar /><SearchFlights /></>} />
+        <Route path="/logistics-business" element={<><Navbar /><LogisticsBusiness /></>} />
       </Routes>
     </Router>
   )
