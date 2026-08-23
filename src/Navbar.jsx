@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
-export default function Navbar({ onOpenSignIn }) {
+export default function Navbar() {
   return (
     <header className="navbar">
       <Link to="/" className="navbar__brand">
@@ -20,9 +20,9 @@ export default function Navbar({ onOpenSignIn }) {
         <Link to="/signup" className="navbar__signup">
           Sign Up
         </Link>
-        <button type="button" className="navbar__signin" onClick={onOpenSignIn}>
+        <Link to="/signin" className="navbar__signin">
           Sign In
-        </button>
+        </Link>
       </div>
     </header>
 

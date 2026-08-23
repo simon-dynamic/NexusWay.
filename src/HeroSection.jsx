@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
-const HeroSection = ({ onOpenSignIn }) => {
+const HeroSection = () => {
+  const navigate = useNavigate();
 
   return (
     <section className="hero-section">
@@ -27,7 +29,7 @@ const HeroSection = ({ onOpenSignIn }) => {
             </div>
           </div>
           <div className="hero-explore-button">
-            <button className="hero-explore-btn" onClick={onOpenSignIn}>Explore</button>
+            <button className="hero-explore-btn" onClick={() => navigate('/signin')}>Explore</button>
           </div>
         </div>
       </div>
