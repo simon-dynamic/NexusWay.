@@ -14,13 +14,59 @@ const SearchFlights = () => {
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
   const [travelClass, setTravelClass] = useState('economy');
+  const [searchResults, setSearchResults] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   const increment = (setter, value) => setter(Math.min(value + 1, 9));
   const decrement = (setter, value) => setter(Math.max(value - 1, 0));
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
-    alert('Search Flights functionality coming soon!');
+    setShowResults(false);
+    setSearchResults([]);
+
+    try {
+      // Build query parameters
+      const params = new URLSearchParams({
+        origin: origin,
+        destination: destination,
+        depart_date: departDate,
+        travel_class: travelClass,
+        adults: adults.toString()
+      });
+
+      // Fetch from FastAPI backend
+      const response = await fetch(`http://localhost:8000/api/flights/search?${params}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.success && data.data) {
+        setSearchResults(data.data);
+        setShowResults(true);
+      } else {
+        setSearchResults([]);
+        setShowResults(true);
+      }
+    } catch (error) {
+      console.error('Error searching flights:', error);
+      alert(`Error: ${error.message}. Make sure the backend server is running on http://localhost:8000`);
+      setSearchResults([]);
+      setShowResults(false);
+    }
+  };
+
+  const handleBookNow = (flightId) => {
+    // Handle booking logic
+    alert(`Booking flight ${flightId}`);
   };
 
 return (
@@ -178,6 +224,53 @@ return (
 
           <button type="submit" className="sf-search-btn">Search Flights</button>
         </form>
+
+        {/* Search Results */}
+        {showResults && searchResults.length > 0 && (
+          <div className="sf-results-section">
+            <h2 className="sf-results-title">Available Flights</h2>
+            <div className="sf-results-container">
+              {searchResults.map((flight, index) => (
+                <div key={flight.id} className="sf-result-row">
+                  <div className="sf-result-item sf-result-airline">
+                    <span className="sf-result-label">Airline</span>
+                    <span className="sf-result-value">{flight.airline}</span>
+                  </div>
+                  <div className="sf-result-item sf-result-dep-time">
+                    <span className="sf-result-label">Dep Time</span>
+                    <span className="sf-result-value">{flight.depTime}</span>
+                  </div>
+                  <div className="sf-result-item sf-result-arrival-time">
+                    <span className="sf-result-label">Arrival Time</span>
+                    <span className="sf-result-value">{flight.arrivalTime}</span>
+                  </div>
+                  <div className="sf-result-item sf-result-price">
+                    <span className="sf-result-label">Price</span>
+                    <span className="sf-result-value">₹{flight.price.toLocaleString()}</span>
+                  </div>
+                  <div className="sf-result-item sf-result-action">
+                    <button 
+                      className="sf-book-btn" 
+                      onClick={() => handleBookNow(flight.id)}
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                  {index < searchResults.length - 1 && <div className="sf-result-separator"></div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* No Results Message */}
+        {showResults && searchResults.length === 0 && (
+          <div className="sf-results-section">
+            <div className="sf-no-results">
+              <p className="sf-no-results-text">No Flights in this Way.</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

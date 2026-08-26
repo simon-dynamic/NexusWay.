@@ -366,6 +366,145 @@
   transform: scale(0.98);
 }
 
+/* Search Results Section */
+.sf-results-section {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.sf-results-title {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.sf-results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sf-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  gap: 24px;
+  position: relative;
+}
+
+.sf-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.sf-result-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sf-result-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.sf-result-airline {
+  flex: 1.5;
+}
+
+.sf-result-dep-time {
+  flex: 0.8;
+}
+
+.sf-result-arrival-time {
+  flex: 0.8;
+}
+
+.sf-result-price {
+  flex: 0.8;
+}
+
+.sf-result-action {
+  flex: 0.7;
+  display: flex;
+  align-items: center;
+}
+
+.sf-book-btn {
+  background: linear-gradient(145deg, #7c3aed 0%, #6d28d9 100%);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  color: #faf5ff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.sf-book-btn:hover {
+  border-color: whitesmoke;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.3),
+    0 4px 20px rgba(124, 58, 237, 0.4),
+    0 8px 40px rgba(109, 40, 217, 0.2);
+  filter: brightness(1.1);
+}
+
+.sf-book-btn:active {
+  transform: scale(0.98);
+}
+
+.sf-result-separator {
+  position: absolute;
+  bottom: -1px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 10%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 90%, 
+    transparent 100%
+  );
+}
+
+/* No Results Message */
+.sf-no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.sf-no-results-text {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .sf-page {
@@ -402,6 +541,29 @@
 
   .sf-class-field {
     max-width: 100%;
+  }
+
+  .sf-result-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .sf-result-item {
+    width: 100%;
+  }
+
+  .sf-result-action {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sf-book-btn {
+    width: 100%;
+  }
+
+  .sf-result-separator {
+    display: none;
   }
 }
 
