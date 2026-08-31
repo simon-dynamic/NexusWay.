@@ -77,9 +77,9 @@ return (
           <img src="/airport%20(1).png" alt="Airport banner" className="sf-banner-image" />
           <span className="sf-banner-text-overlay">Find your way</span>
           <div className="sf-banner-words">
-            <span className="sf-banner-word">Find</span>
+            <span className="sf-banner-word sf-banner-word-find">Find</span>
             <span className="sf-banner-word">Strive</span>
-            <span className="sf-banner-word">Reach</span>
+            <span className="sf-banner-word sf-banner-word-reach">Reach</span>
           </div>
         </div>
       </div>

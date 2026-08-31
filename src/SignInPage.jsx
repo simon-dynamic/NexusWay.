@@ -72,9 +72,6 @@ const SignInPage = () => {
         {/* Right Side - Image */}
         <div className="signin-image-section">
           <img src="/ribbon2.jpg" alt="Ribbon background" className="signin-image" />
-          <span className="signin-image-text">Find</span>
-          <span className="signin-image-text-strive">Strive</span>
-          <span className="signin-image-text-reach">Reach</span>
         </div>
       </div>
     </div>

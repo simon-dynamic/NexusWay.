@@ -46,7 +46,13 @@
   font-size: var(--sf-banner-text-size);
   white-space: nowrap;
   text-align: center;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  text-shadow:
+    0 0 15px rgba(128, 6, 185, 0.6),
+    0 0 30px rgba(128, 6, 185, 0.4),
+    0 0 45px rgba(157, 78, 221, 0.3),
+    0 0 60px rgba(173, 113, 236, 0.2),
+    0 0 75px rgba(199, 125, 255, 0.1),
+    0 3px 12px rgba(0, 0, 0, 0.5);
   pointer-events: none;
   line-height: 1;
 }
@@ -69,7 +75,11 @@
   color: #a19d9d;
   font-size: 45px;
   letter-spacing: -0.01em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 0 8px rgba(255, 0, 0, 0.4),
+    0 0 16px rgba(232, 112, 132, 0.3),
+    0 0 24px rgba(255, 105, 180, 0.2),
+    2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .sf-container {

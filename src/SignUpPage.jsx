@@ -67,7 +67,7 @@ const SignUpPage = () => {
         
 {/* Right Side - Image */}
         <div className="signup-image-section">
-<img src="/ribbon.png" alt="Ribbon background" className="signup-image" />
+<img src="/ribbon1.jpg" alt="Ribbon background" className="signup-image" />
           <span className="signup-image-text">Find</span>
           <span className="signup-image-text-strive">Strive</span>
           <span className="signup-image-text-reach">Reach</span>
